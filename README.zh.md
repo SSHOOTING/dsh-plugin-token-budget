@@ -98,3 +98,6 @@ npm pack --dry-run
 - [dsh-plugin-session-archive](https://github.com/SSHOOTING/dsh-plugin-session-archive)
 - [dsh-plugin-mcp-guard](https://github.com/SSHOOTING/dsh-plugin-mcp-guard)
 - [dsh-plugin-free-model-advisor](https://github.com/SSHOOTING/dsh-plugin-free-model-advisor)
+## Demo
+
+![Demo](docs/demo.png)
