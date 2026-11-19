@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-token-budget",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DSH plugin: fold token usage from the current session and report it against a configurable budget. Read-only, no network calls, no session content stored.",
   "type": "module",
   "main": "lib/index.js",
@@ -31,7 +31,8 @@
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "npm run build && node tests/core.test.mjs && node tests/entry.test.mjs",
-    "pack:check": "npm pack --dry-run"
+    "pack:check": "npm pack --dry-run",
+    "prepack": "npm run build"
   },
   "dsh": {
     "bundle": {

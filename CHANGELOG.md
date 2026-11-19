@@ -9,3 +9,9 @@
 - Registers the command through `ctx.effect()` so disable/reload disposes it cleanly.
 - `--json` output for automation.
 - Fully offline test suite with synthetic event fixtures.
+
+## 0.1.1 (2026-11-19)
+
+- Release packaging: run the TypeScript build automatically before npm pack/publish.
+- Refresh install documentation to require --profile web.
+- Publish the first installable npm version for this plugin.
