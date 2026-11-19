@@ -1,0 +1,5 @@
+# Portable overlay for local development: relative name only. --patch resolves
+# against the profile directory, so cold-boot through dshx start / dshx verify-boot.
+- insert:
+    - id: dsh-plugin-token-budget
+      name: './src/index.ts'

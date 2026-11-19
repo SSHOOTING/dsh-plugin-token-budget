@@ -1,0 +1,8 @@
+# Official bundle layer. `dsh plugin add dsh-plugin-token-budget` applies this row
+# into the profile. Rows resolve by package name so the installed copy is what boots.
+- insert:
+    - id: dsh-plugin-token-budget
+      name: dsh-plugin-token-budget
+      config:
+        budget:
+          maxTokens: 100000
