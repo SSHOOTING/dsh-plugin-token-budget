@@ -7,7 +7,7 @@
 ## 安装
 
 ```powershell
-dsh plugin add dsh-plugin-token-budget
+dsh plugin --profile web add dsh-plugin-token-budget
 ```
 
 要求 Node `^22.19.0 || >=24`，DSH `>=0.2.0-rc.2 <0.3.0`。
@@ -73,7 +73,7 @@ bundle patch 默认预算为 100,000 token。在你的 profile `cordis.patch.yml
 
 | 现象 | 原因 | 处理 |
 |---|---|---|
-| 找不到 `/budget` | bundle 行未安装 | 重跑 `dsh plugin add dsh-plugin-token-budget`，重启 DSH。 |
+| 找不到 `/budget` | bundle 行未安装 | 重跑 `dsh plugin --profile web add dsh-plugin-token-budget`，重启 DSH。 |
 | 提示 `no model calls observed` | 本会话还没有带 usage 的 `assistant/message` 事件 | 先用几轮，再执行。 |
 | 预算不是我配置的值 | profile 的 `cordis.patch.yml` 覆盖了 bundle 行 | 后写者胜；改 profile 里的那一行。 |
 | 一直显示默认 100,000 | `maxTokens` 非法（字符串、零、负数） | 在配置块里填正数。 |

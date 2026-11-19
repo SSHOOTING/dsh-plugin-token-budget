@@ -7,7 +7,7 @@ Cost dashboards show billing after the fact; `token-budget` folds the usage coun
 ## Install
 
 ```powershell
-dsh plugin add dsh-plugin-token-budget
+dsh plugin --profile web add dsh-plugin-token-budget
 ```
 
 Requires Node `^22.19.0 || >=24` and DSH `>=0.2.0-rc.2 <0.3.0`.
@@ -73,7 +73,7 @@ An empty session reports zero tokens, score `0`, and verdict `ok`.
 
 | Symptom | Cause | Fix |
 |---|---|---|
-| `/budget` not found | Bundle row not installed | Re-run `dsh plugin add dsh-plugin-token-budget`, then restart DSH. |
+| `/budget` not found | Bundle row not installed | Re-run `dsh plugin --profile web add dsh-plugin-token-budget`, then restart DSH. |
 | `no model calls observed` | No `assistant/message` usage events in this session yet | Use the session once, then re-run. |
 | Budget is not what I configured | Profile `cordis.patch.yml` overrides the bundle row | The last write wins — edit the profile row, not the package. |
 | Always shows the default 100,000 | `maxTokens` is invalid (string, zero, negative) | Set a positive number in the config block. |
